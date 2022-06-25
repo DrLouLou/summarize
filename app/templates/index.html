@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+    <div className="App">
+        <header className="App-header">
+            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+            <form id="summarize-form" action="/summarize">
+                <label for="fname" id="box-label" >Enter Text:</label>
+                <textarea id="summarize-box" name="summarize-box" rows="10" cols="50"></textarea>
+                <input type="submit" value="Summarize" class="custom-btn btn-3"></input>
+            </form>
+        </header>
+    </div>
+</html>
