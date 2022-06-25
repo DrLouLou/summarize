@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{{ the_title }}</title>
+
+        <!-- note the special href for files in the Flask "static" folder -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type='text/css'>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+
+
+    </head>
+
+
+    <!-- Jinja directives: page contents will go between them -->
+    {% block content %}
+    {% endblock %}
+
+    <body>
+
+        <div id="container">
+
+        
+
+        </div>
+
+    </body>
+</html>

@@ -1,13 +1,39 @@
-<!doctype html>
-<html>
+{% import "bootstrap/wtf.html" as wtf %}
+{% extends 'base.html' %}
+
+{% block content %}
+
     <div className="App">
         <header className="App-header">
-            <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
-            <form id="summarize-form" action="/summarize">
+            <h1>Summarize</h1>
+            <!-- old form -->
+            <!-- do i need method='post'? -->
+            <!-- <form id="summarize-form" action="/index"> 
                 <label for="fname" id="box-label" >Enter Text:</label>
                 <textarea id="summarize-box" name="summarize-box" rows="10" cols="50"></textarea>
                 <input type="submit" value="Summarize" class="custom-btn btn-3"></input>
+            </form> -->
+
+            <!-- new form -->
+            <form action="/index" method="post" novalidate>
+                {{ form.hidden_tag() }}
+                <p>
+                    {{ form.prompt.label }}<br>
+                    {{ form.prompt(size=32) }}
+                </p>
+
+                <p>{{ form.submit() }}</p>
             </form>
+
+            <h2>
+                Output
+            </h2>
+            <textarea style="width:300px; height:150px;" >
+            {% if gens %}
+                {{gens[0]}}
+            {% endif %}
+            </textarea>
         </header>
     </div>
-</html>
+
+{% endblock %}
