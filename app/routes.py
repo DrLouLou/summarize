@@ -56,7 +56,7 @@ def index():
 
 def isCorrectLength(prompt):
     words = prompt.split(" ")
-    if 1<len(words)<300:
-        return True
-    else:
-        return False
+    return 1<len(words)<300
+
+def isEnglish(gen):
+    pass

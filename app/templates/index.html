@@ -3,7 +3,7 @@
 {% block content %}
 
     <div className="App">
-        <div class="container">
+        <div class="container" style="background-color: #f8f9fa;">
             <div class="row-cols-4">
                 <header className="App-header">
                     <br>
@@ -23,7 +23,7 @@
                             {{ form.prompt.label(class_="h5")}}<br>
                             {{ form.prompt(class_="form-control") }}
                         </p>
-                        <p>{{ form.submit() }}</p>
+                        <p>{{ form.submit(class_="btn btn-primary") }}</p>
                     </form>
                     <br>
                     <br>
@@ -31,7 +31,7 @@
                     <h5 class="text-center text-muted">
                         Summary
                     </h5>
-                    <textarea style="width:100%;">
+                    <textarea style="width:100%; height: 300px;">
                     {% if gens %}
                         {{gens[0]}}
                     {% endif %}
