@@ -3,7 +3,6 @@ from flask import render_template, request
 from app.forms import SummarizeForm
 import cohere
 
-
 # import pandas as pd
 api_key = 'VQQattBOwmpc16qSuIqlMTn71XPCUWqKrcP9hDus'
 co = cohere.Client(api_key, '2021-11-08')
@@ -49,10 +48,9 @@ def index():
 
             # print(gens[0])
             return render_template('index.html', form=form, gens=gens)
-
         else:
             message = "Please enter a valid prompt"
-    
+            
     form = SummarizeForm()
     return render_template('index.html', form=form, message=message)
 
@@ -62,4 +60,3 @@ def isCorrectLength(prompt):
         return True
     else:
         return False
-

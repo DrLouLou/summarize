@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
 
-
 app = Flask(__name__)
 
 # Flask-WTF requires an encryption key - the string can be anything
