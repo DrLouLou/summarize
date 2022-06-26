@@ -1,5 +1,10 @@
-.App {
+.label {
+  font-size: 32px;
+}
+/* .App {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .App-logo {
@@ -44,7 +49,7 @@
   
   } */
   
-  .custom-btn {
+  /* .custom-btn {
     width: 130px;
     height: 40px;
     color: #fff;
@@ -136,14 +141,15 @@
   .form-control {
     height: 150px;
     width: 300px;
+
   }
   
   
   .App-link {
     color: #61dafb;
-  }
+  } */
   
-  @keyframes App-logo-spin {
+  /* @keyframes App-logo-spin {
     from {
       transform: rotate(0deg);
     }
@@ -151,4 +157,5 @@
       transform: rotate(360deg);
     }
   }
-  
+   *
+

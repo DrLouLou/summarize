@@ -4,27 +4,31 @@
 {% block content %}
 
     <div  className="App">
-        <header className="App-header">
-            <h1>Summarize</h1>
-            <form action="/index" method="post" novalidate>
-                {{ form.hidden_tag() }}
-                <p>
-                    {{ form.prompt.label }}<br>
-                    {{ form.prompt(class_="form-control") }}
-                </p>
+        <nav class="navbar navbar-dark bg-primary">
+            <h1 style="color:white;" >SummarizeMyText</h1>
+        </nav>
+        <div class="container" style="margin-top:7%;" >
+            <body>
+                <form action="/index" method="post" class="form-group" novalidate>
+                    {{ form.hidden_tag() }}
+                    <p>
+                        {{ form.prompt.label(class_="label") }}<br>
+                        {{ form.prompt(class_="form-control") }}
+                    </p>
 
-                <p>{{ form.submit() }}</p>
-            </form>
+                    <p>{{ form.submit(class_="btn btn-primary") }}</p>
+                </form>
 
-            <h2>
-                Output
-            </h2>
-            <textarea style="width:300px; height:150px;" >
-            {% if gens %}
-                {{gens[0]}}
-            {% endif %}
-            </textarea>
-        </header>
+                <h2 style="margin-top:5%;">
+                    Output
+                </h2>
+                <textarea style="width:300px; height:150px;" class="form-control">
+                {% if gens %}
+                    {{gens[0]}}
+                {% endif %}
+                </textarea>
+            </body>
+        </div>
     </div>
 
 {% endblock %}
