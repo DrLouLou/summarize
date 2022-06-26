@@ -17,10 +17,10 @@
             <br>
             <div class="text-center">
                 <body>
-                    <form action="index" method="post" style="width:100%;" novalidate>
-                        {{ form.hidden_tag() }}
+                        <form action="index" method="post" style="width:100%;" novalidate>
+                            {{ form.hidden_tag() }}
                         <p class="text-center text-muted">
-                            {{ form.prompt.label }}<br>
+                            {{ form.prompt.label(class_="h5")}}<br>
                             {{ form.prompt(class_="form-control") }}
                         </p>
                         <p>{{ form.submit() }}</p>
@@ -28,9 +28,9 @@
                     <br>
                     <br>
                     <br>
-                    <h6 class="text-center text-muted">
+                    <h5 class="text-center text-muted">
                         Summary
-                    </h6>
+                    </h5>
                     <textarea style="width:100%;">
                     {% if gens %}
                         {{gens[0]}}
