@@ -56,3 +56,10 @@ def index():
     form = SummarizeForm()
     return render_template('index.html', form=form, message=message)
 
+def isCorrectLength(prompt):
+    words = prompt.split(" ")
+    if 1<len(words)<300:
+        return True
+    else:
+        return False
+

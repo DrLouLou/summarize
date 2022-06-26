@@ -6,20 +6,11 @@
     <div className="App">
         <header className="App-header">
             <h1>Summarize</h1>
-            <!-- old form -->
-            <!-- do i need method='post'? -->
-            <!-- <form id="summarize-form" action="/index"> 
-                <label for="fname" id="box-label" >Enter Text:</label>
-                <textarea id="summarize-box" name="summarize-box" rows="10" cols="50"></textarea>
-                <input type="submit" value="Summarize" class="custom-btn btn-3"></input>
-            </form> -->
-
-            <!-- new form -->
             <form action="/index" method="post" novalidate>
                 {{ form.hidden_tag() }}
                 <p>
                     {{ form.prompt.label }}<br>
-                    {{ form.prompt(size=32) }}
+                    {{ form.prompt(class_="form-control") }}
                 </p>
 
                 <p>{{ form.submit() }}</p>

@@ -132,6 +132,11 @@
   .btn-3 span:hover:after {
     width: 100%;
   }
+
+  .form-control {
+    height: 150px;
+    width: 300px;
+  }
   
   
   .App-link {
