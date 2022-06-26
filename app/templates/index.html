@@ -8,7 +8,7 @@
                 <header className="App-header">
                     <br>
                     <br>
-                    <h1 class="text-center">Summarize Your Text!</h1>
+                    <h1 class="text-center text-primary">Summarize Your Text!</h1>
                 </header>
             </div>
             <br>
@@ -19,7 +19,7 @@
                 <body>
                     <form action="index" method="post" style="width:100%;" novalidate>
                         {{ form.hidden_tag() }}
-                        <p class="text-center">
+                        <p class="text-center text-muted">
                             {{ form.prompt.label }}<br>
                             {{ form.prompt(class_="form-control") }}
                         </p>
@@ -28,8 +28,8 @@
                     <br>
                     <br>
                     <br>
-                    <h6 class="text-center">
-                        Output
+                    <h6 class="text-center text-muted">
+                        Summary
                     </h6>
                     <textarea style="width:100%;">
                     {% if gens %}
